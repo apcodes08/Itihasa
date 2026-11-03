@@ -1,0 +1,453 @@
+.journeyPage {
+  min-height: calc(100vh - 65px);
+  background: #F5EFE6;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  padding-bottom: 5rem;
+}
+
+/* Header */
+.journeyHeader {
+  background: #FAF4E6;
+  border-bottom: 2px solid #D4C6AB;
+  padding: 2.5rem 1.5rem 2rem;
+}
+
+.headerInner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 300px;
+}
+
+.headerTag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #B96F4B;
+  margin-bottom: 0.4rem;
+}
+
+.headerTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #40382F;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.headerDesc {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #6B5C4C;
+  margin: 0;
+  max-width: 55ch;
+}
+
+/* Stats */
+.journeyStats {
+  background: #F0E8D7;
+  border: 1.5px solid #D4C6AB;
+  border-radius: 16px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 240px;
+}
+
+.statBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.statNumber {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #40382F;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #6B5C4C;
+}
+
+.progressBarWrapper {
+  width: 100%;
+}
+
+.progressBarTrack {
+  height: 8px;
+  background: #E8DFCD;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: #B96F4B;
+  border-radius: 4px;
+  transition: width 400ms ease;
+}
+
+/* Path Container */
+.pathContainer {
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Unit Section */
+.unitSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.unitHeader {
+  background: #FAF4E6;
+  border: 2px solid #D4C6AB;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 3px 10px rgba(64, 56, 47, 0.04);
+}
+
+.unitTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #788568;
+  background: #E4ECDE;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.4rem;
+}
+
+.unitTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0 0 0.35rem;
+}
+
+.unitDesc {
+  font-size: 0.88rem;
+  color: #6B5C4C;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Flow */
+.unitStepsFlow {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.nodeWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Winding zig-zag offsets */
+.nodeOffsetLeft {
+  margin-right: auto;
+  width: 100%;
+}
+
+.nodeOffsetRight {
+  margin-left: auto;
+  width: 100%;
+}
+
+.connectorLine {
+  position: absolute;
+  left: 32px;
+  top: 64px;
+  bottom: -40px;
+  width: 4px;
+  background: #D4C6AB;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.nodeItem {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Stepping Stone Node Circle */
+.nodeCircle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 180ms ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(64, 56, 47, 0.12);
+}
+
+.nodeCompleted {
+  background: #788568;
+  color: #FFFDF8;
+  border: 3px solid #5E6B52;
+}
+
+.nodeCompleted:hover {
+  transform: scale(1.06);
+  background: #5E6B52;
+}
+
+.nodeUnlocked {
+  background: #B96F4B;
+  color: #FFFDF8;
+  border: 3px solid #9A5A38;
+}
+
+.nodeUnlocked:hover {
+  transform: scale(1.06);
+  background: #9A5A38;
+}
+
+.nodeLocked {
+  background: #D4C6AB;
+  color: #9A8A78;
+  border: 3px solid #C9B99A;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.milestoneCircle {
+  width: 72px;
+  height: 72px;
+  border-width: 4px;
+}
+
+.iconCompleted {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.iconUnlocked {
+  font-size: 1.5rem;
+}
+
+.iconLocked {
+  font-size: 1.3rem;
+}
+
+/* Pulse animation */
+.pulseRing {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 2px solid #B96F4B;
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+/* Node Card */
+.nodeCard {
+  flex: 1;
+  background: #FAF4E6;
+  border: 2px solid #D4C6AB;
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  box-shadow: 0 3px 10px rgba(64, 56, 47, 0.05);
+  transition: transform 150ms ease, border-color 150ms ease;
+}
+
+.nodeCard:hover {
+  border-color: #B96F4B;
+  transform: translateY(-2px);
+}
+
+.nodeCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.nodeTypePill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #786B5A;
+}
+
+.nodePoints {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #B96F4B;
+  background: #F7EDE7;
+  padding: 0.15rem 0.55rem;
+  border-radius: 10px;
+}
+
+.nodeTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0 0 0.5rem;
+}
+
+.badgeReward {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: #7A622A;
+  background: #F5ECCF;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.badgeRewardIcon {
+  font-size: 1rem;
+}
+
+.nodeActions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.nodeActionBtn {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 150ms ease;
+}
+
+.actionStart {
+  background: #B96F4B;
+  color: #FFFDF8;
+}
+
+.actionStart:hover {
+  background: #9A5A38;
+}
+
+.actionReview {
+  background: #E4ECDE;
+  color: #4A5641;
+}
+
+.actionReview:hover {
+  background: #D5E2CC;
+}
+
+.actionLocked {
+  background: #E8DFCD;
+  color: #9A8A78;
+  cursor: not-allowed;
+}
+
+/* Trail End */
+.trailEnd {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.trailEndCard {
+  background: #FAF4E6;
+  border: 2px dashed #B96F4B;
+  border-radius: 18px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trailEndIcon {
+  font-size: 2.2rem;
+}
+
+.trailEndTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0;
+}
+
+.trailEndText {
+  font-size: 0.92rem;
+  color: #6B5C4C;
+  max-width: 45ch;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.worldMapBtn {
+  margin-top: 0.5rem;
+  background: #B96F4B;
+  color: #FFFDF8;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 10px;
+  transition: background 150ms ease;
+}
+
+.worldMapBtn:hover {
+  background: #9A5A38;
+}
+
+@media (max-width: 600px) {
+  .nodeItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .connectorLine {
+    display: none;
+  }
+  .nodeCircle {
+    width: 52px;
+    height: 52px;
+  }
+}
+

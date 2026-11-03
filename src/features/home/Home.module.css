@@ -1,0 +1,344 @@
+.page {
+  min-height: calc(100vh - 65px);
+  background: #F5EFE6;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  padding-bottom: 4rem;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2.5rem;
+  gap: 2.5rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.heroBadge {
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #B96F4B;
+  background: #F7EDE7;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.heroTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: #40382F;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.heroLead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #6B5C4C;
+  max-width: 50ch;
+  margin: 0;
+}
+
+.heroActionGroup {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  background: #B96F4B;
+  color: #FFFDF8;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 1.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 150ms ease;
+  box-shadow: 0 4px 12px rgba(185, 111, 75, 0.28);
+}
+
+.primaryCta:hover {
+  background: #9A5A38;
+  transform: translateY(-1px);
+}
+
+.secondaryCta {
+  background: #FAF4E6;
+  border: 1.5px solid #D4C6AB;
+  color: #40382F;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.85rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.secondaryCta:hover {
+  background: #F0E8D7;
+  border-color: #B96F4B;
+}
+
+.heroIllustrationContainer {
+  background: #FAF4E6;
+  border: 2px solid #D4C6AB;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(64, 56, 47, 0.08);
+}
+
+.landscapeSvg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Progress Banner */
+.progressBanner {
+  background: #FAF4E6;
+  border-top: 1px solid #D4C6AB;
+  border-bottom: 1px solid #D4C6AB;
+  padding: 1rem 1.5rem;
+}
+
+.progressInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.progressInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressLabel {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #786B5A;
+}
+
+.progressScore {
+  font-size: 0.95rem;
+  color: #40382F;
+}
+
+.progressTrack {
+  flex: 1;
+  min-width: 180px;
+  height: 10px;
+  background: #E8DFCD;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #B96F4B;
+  border-radius: 5px;
+  transition: width 500ms ease;
+}
+
+.pointsBadge {
+  background: #F5ECCF;
+  border: 1.5px solid #D6B775;
+  padding: 0.45rem 1rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  color: #40382F;
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.pointsBadge:hover {
+  transform: translateY(-1px);
+}
+
+/* Environments Section */
+.environmentsSection {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0 0 0.35rem;
+}
+
+.sectionSub {
+  font-size: 0.95rem;
+  color: #6B5C4C;
+  margin: 0;
+}
+
+.worldMapBtn {
+  background: #FAF4E6;
+  border: 1.5px solid #D4C6AB;
+  color: #40382F;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.worldMapBtn:hover {
+  background: #F0E8D7;
+  border-color: #B96F4B;
+}
+
+/* Realm Grid */
+.realmGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.realmCard {
+  background: #FAF4E6;
+  border: 2px solid #D4C6AB;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  cursor: pointer;
+  transition: all 180ms ease;
+  box-shadow: 0 4px 12px rgba(64, 56, 47, 0.04);
+}
+
+.realmCard:hover {
+  border-color: #B96F4B;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(64, 56, 47, 0.1);
+}
+
+.realmCardDone {
+  border-color: #788568;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardIconBox {
+  width: 56px;
+  height: 56px;
+  background: #FFFDF8;
+  border: 1.5px solid #D4C6AB;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-shadow: 0 2px 6px rgba(64, 56, 47, 0.06);
+}
+
+.iconSvg {
+  width: 44px;
+  height: 44px;
+}
+
+.completedBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5E6B52;
+  background: #D7E8CF;
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+}
+
+.readyBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #786B5A;
+  background: #E8DFCD;
+  padding: 0.2rem 0.65rem;
+  border-radius: 12px;
+}
+
+.sanskritTag {
+  font-size: 0.8rem;
+  color: #788568;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.cardTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0 0 0.25rem;
+}
+
+.cardTheme {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #B96F4B;
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #6B5C4C;
+  margin: 0;
+}
+
+.cardFooter {
+  padding-top: 0.75rem;
+  border-top: 1px solid #E8DFCD;
+}
+
+.enterLink {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #B96F4B;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}

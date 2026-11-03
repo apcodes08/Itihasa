@@ -1,0 +1,24 @@
+/* =====================================================
+   ITIHASA — Theme Tokens & Aliases
+   ===================================================== */
+:root {
+  /* Warm palette tokens */
+  --color-cream: #F5EFE6;
+  --color-parchment: #FAF4E6;
+  --color-forest-green: #4A6B45;
+  --color-olive: #7A8450;
+  --color-terracotta: #B96F4B;
+  --color-teracotta: #B96F4B; /* alias for safety */
+  --color-terracotta-dk: #9A5A38;
+  --color-golden: #CDA84D;
+  --color-ochre: #D6B775;
+  --color-brown: #40382F;
+
+  /* Text colors */
+  --color-text-primary: #3B2E2A;
+  --color-text-muted: #6F5F5A;
+
+  /* Font families */
+  --font-primary: 'Lora', Georgia, serif;
+  --font-secondary: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+}

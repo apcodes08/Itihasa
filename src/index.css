@@ -1,0 +1,121 @@
+/* =====================================================
+   ITIHASA — Global Design System
+   Warm, illustrated, parchment-inspired educational world.
+   Strictly no blues, purples, neon or generic dashboard styles.
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+@import "./styles/theme.css";
+
+:root {
+  /* Core Colours */
+  --parchment:     #FAF4E6;
+  --cream:         #F5EFE6;
+  --cream-deep:    #EFE7D8;
+  --terracotta:    #B96F4B;
+  --terracotta-dk: #9A5A38;
+  --terracotta-lt: #F7EDE7;
+  --green:         #788568;
+  --green-dk:      #5E6B52;
+  --green-lt:      #E4ECDE;
+  --brown:         #40382F;
+  --brown-lt:      #6B5C4C;
+  --ochre:         #D6B775;
+  --ochre-lt:      #F5ECCF;
+  --sand:          #C9B99A;
+  --sand-lt:       #EDE5D5;
+  --white-warm:    #FFFDF8;
+
+  /* Typography */
+  --font-story: 'Lora', Georgia, serif;
+  --font-ui:    'Nunito Sans', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Shadows (soft, subtle, natural warm tint) */
+  --shadow-warm-sm: 0 2px 4px rgba(64, 56, 47, 0.08);
+  --shadow-warm-md: 0 4px 12px rgba(64, 56, 47, 0.10);
+  --shadow-warm-lg: 0 8px 24px rgba(64, 56, 47, 0.12);
+
+  /* Transitions */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-med:  280ms;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--brown);
+  background-color: var(--cream);
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Accessible focus outline */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sand);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brown-lt);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

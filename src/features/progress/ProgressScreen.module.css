@@ -1,0 +1,307 @@
+.container {
+  min-height: calc(100vh - 65px);
+  background: #F5EFE6;
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  padding-bottom: 4rem;
+}
+
+.header {
+  background: #FAF4E6;
+  border-bottom: 2px solid #D4C6AB;
+  padding: 2.5rem 1.5rem 2rem;
+}
+
+.headerInner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.avatarPill {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.avatarEmblem {
+  background: #FFFDF8;
+  border: 2px solid #D6B775;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(64, 56, 47, 0.08);
+}
+
+.learnerTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0 0 0.2rem;
+}
+
+.learnerSubtitle {
+  font-size: 0.9rem;
+  color: #6B5C4C;
+}
+
+.quickStatsRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.statPill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #F0E8D7;
+  border: 1.5px solid #D4C6AB;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+}
+
+.statIcon {
+  font-size: 1.2rem;
+  color: #B96F4B;
+}
+
+.statPill strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #40382F;
+  line-height: 1.1;
+}
+
+.statPill span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #786B5A;
+  text-transform: uppercase;
+}
+
+.main {
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sectionTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0;
+}
+
+.journeyLink {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #B96F4B;
+  background: none;
+  cursor: pointer;
+}
+
+.journeyLink:hover {
+  text-decoration: underline;
+}
+
+.badgeProgressTag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #788568;
+  background: #E4ECDE;
+  padding: 0.25rem 0.75rem;
+  border-radius: 14px;
+}
+
+/* Realms Grid */
+.realmsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.realmCard {
+  background: #FAF4E6;
+  border: 2px solid #D4C6AB;
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 150ms ease;
+}
+
+.realmCard:hover {
+  border-color: #B96F4B;
+  transform: translateY(-2px);
+}
+
+.realmCardDone {
+  border-color: #788568;
+}
+
+.realmCheck {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #788568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.realmCardTitle {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #40382F;
+  margin: 0 0 0.25rem;
+}
+
+.realmCardSub {
+  font-size: 0.85rem;
+  color: #6B5C4C;
+  margin: 0;
+}
+
+.realmCardBtn {
+  background: #B96F4B;
+  color: #FFFDF8;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.realmCardBtn:hover {
+  background: #9A5A38;
+}
+
+/* Badges Grid */
+.badgesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.badgeCard {
+  background: #FAF4E6;
+  border: 2px solid #D4C6AB;
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: all 150ms ease;
+}
+
+.badgeEarned {
+  border-color: #D6B775;
+  background: #FFFDF8;
+  box-shadow: 0 4px 12px rgba(214, 183, 117, 0.15);
+}
+
+.badgeLocked {
+  opacity: 0.65;
+}
+
+.badgeIconWrapper {
+  width: 58px;
+  height: 58px;
+  background: #FFFDF8;
+  border: 1.5px solid #D4C6AB;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.badgeEmoji {
+  font-size: 1.8rem;
+}
+
+.checkBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 18px;
+  height: 18px;
+  background: #788568;
+  color: #FFFDF8;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeContent {
+  flex: 1;
+}
+
+.badgeRealm {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #788568;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.badgeName {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #40382F;
+  margin: 0 0 0.35rem;
+}
+
+.badgeDesc {
+  font-size: 0.82rem;
+  color: #6B5C4C;
+  line-height: 1.45;
+  margin: 0 0 0.6rem;
+}
+
+.badgeStatus {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #B96F4B;
+  background: #F7EDE7;
+  padding: 0.15rem 0.5rem;
+  border-radius: 8px;
+}
+
